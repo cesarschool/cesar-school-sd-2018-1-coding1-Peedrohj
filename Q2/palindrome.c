@@ -11,12 +11,21 @@
  * Output: true se a sentença é um palídromo, falso caso negativo.
  */
 
-bool isPalindrome (char sentence[], int length) {
-    printf("\nisPalindrome::START: %s, %d\n", sentence, length);
-
-    // TODO: YOUR CODE HERE!
-    
-    printf("\nisPalindrome::END\n");
+bool isPalindrome (char sentence[], int length){
+	printf("\nisPalindrome::START: %s, %d\n", sentence, length);
+	int npal, ind;
+	for (ind = 0; ind < (length/2); ind ++){
+		if (sentence[ind] != sentence[length - 1 - ind]){
+			npal += 1;
+		}		
+	}
+	if (npal!=0){
+		printf("Não é Palindrome");
+	}
+	else{
+		printf("É Palindrome");
+	}
+	printf("\nisPalindrome::END\n");
     return false;
 }
 
@@ -27,11 +36,10 @@ int main()
     // true cases
     isPalindrome("ovo", 3);
     isPalindrome("arara", 5);
-
+    
     // false cases
     isPalindrome("cesar", 5);
     isPalindrome("school", 6);
 
     return 0;
 }
- 
