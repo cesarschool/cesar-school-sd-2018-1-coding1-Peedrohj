@@ -15,7 +15,7 @@ char firstNonRepeatingChar (char sentence[], int length)
             break;
         }        
         for(int x = 0; x <= ( length - 1); x++){
-            if(letra == sentence[j]){
+            if(letra == sentence[x]){
                 repete++;
         }        
     }
